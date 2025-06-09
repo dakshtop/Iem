@@ -1,32 +1,30 @@
 local a,b,c=game:GetService("\82\101\112\108\105\99\97\116\101\100\83\116\111\114\97\103\101"),game:GetService("\80\108\97\121\101\114\115"),game:GetService("\82\117\110\83\101\114\118\105\99\101")
-local d,e=a["\71\97\109\101\69\118\101\110\116\115"]["\80\101\116\69\103\103\83\101\114\118\105\99\101"]["\79\110\67\108\105\101\110\116\69\118\101\110\116"],b["\76\111\99\97\108\80\108\97\121\101\114"]
-local f=workspace["\67\117\114\114\101\110\116\67\97\109\101\114\97"]
-local g=getupvalue(getupvalue(getconnections(d)[1].Function,1),2)
-local h,i=getupvalue(g,1),getupvalue(g,2)
-local j,k={},{}
-local l,m,n=Color3.fromRGB(0,100,0),Color3.fromRGB(144,238,144),Color3.fromRGB(0,255,0)
+local d,e=b["\76\111\99\97\108\80\108\97\121\101\114"],workspace["\67\117\114\114\101\110\116\67\97\109\101\114\97"]
+local f=getupvalue(getupvalue(getconnections(a["\71\97\109\101\69\118\101\110\116\115"]["\80\101\116\69\103\103\83\101\114\118\105\99\101"]["\79\110\67\108\105\101\110\116\69\118\101\110\116"])[1].Function,1),2)
+local g,h=getupvalue(f,1),getupvalue(f,2)
+local i,j={},{}
+local k,l,m=Color3.fromRGB(0,100,0),Color3.fromRGB(144,238,144),Color3.fromRGB(0,255,0)
 
-local function o(p)for q in h do if q:GetAttribute("\79\66\74\69\67\84\95\85\85\73\68")==p then return q end end end
+local function n(o)for p in g do if p:GetAttribute("\79\66\74\69\67\84\95\85\85\73\68")==o then return p end end end
 
-local function r(s,t)local u=o(s)if not u or not j[s]then return end local v=u:GetAttribute("\69\103\103\78\97\109\101")j[s].Text=(v or "?").." | "..(t or "?")end
+local function q(r,s)local t=n(r)if not t or not i[r]then return end local u=t:GetAttribute("\69\103\103\78\97\109\101")i[r].Text=`{u} | {s}`end
 
-local function w(x)for _,y in next,x:GetChildren()do if y:IsA("\83\101\108\101\99\116\105\111\110\66\111\120")and(y.Name=="\79\117\116\101\114\79\117\116\108\105\110\101"or y.Name=="\73\110\110\101\114\79\117\116\108\105\110\101")then y:Destroy()end end end
+local function v(w)for _,x in pairs(w:GetChildren())do if x:IsA("\83\101\108\101\99\116\105\111\110\66\111\120")and(x.Name=="\79\117\116\101\114\79\117\116\108\105\110\101"or x.Name=="\73\110\110\101\114\79\117\116\108\105\110\101")then x:Destroy()end end end
 
-local function z(A)if not A then return end local B=Instance.new("\83\101\108\101\99\116\105\111\110\66\111\120")B.Name="\79\117\116\101\114\79\117\116\108\105\110\101"B.Adornee=A B.LineThickness=0.04 B.Color3=l B.SurfaceTransparency=1 B.Parent=A local C=Instance.new("\83\101\108\101\99\116\105\111\110\66\111\120")C.Name="\73\110\110\101\114\79\117\116\108\105\110\101"C.Adornee=A C.LineThickness=0.02 C.Color3=m C.SurfaceTransparency=1 C.Parent=A end
+local function y(z)if not z then return end local A=Instance.new("\83\101\108\101\99\116\105\111\110\66\111\120")A.Name="\79\117\116\101\114\79\117\116\108\105\110\101"A.Adornee=z A.LineThickness=0.04 A.Color3=k A.SurfaceTransparency=1 A.Parent=z local B=Instance.new("\83\101\108\101\99\116\105\111\110\66\111\120")B.Name="\73\110\110\101\114\79\117\116\108\105\110\101"B.Adornee=z B.LineThickness=0.02 B.Color3=l B.SurfaceTransparency=1 B.Parent=z end
 
-local function D(E)if E:GetAttribute("\79\87\78\69\82")~=e.Name then return end local F,G,H=E:GetAttribute("\69\103\103\78\97\109\101"),i[E:GetAttribute("\79\66\74\69\67\84\95\85\85\73\68")],E:GetAttribute("\79\66\74\69\67\84\95\85\85\73\68")if not H then return end for _,I in next,E:GetDescendants()do if I:IsA("\66\97\115\101\80\97\114\116")then w(I)z(I)end end local J=Drawing.new("Text")J.Text=(F or "?").." | "..(G or "?")J.Size=18 J.Color=n J.Outline=true J.OutlineColor=Color3.new(0,0,0)J.Center=true J.Visible=false j[H]=J k[H]=E end
+local function C(D)if D:GetAttribute("\79\87\78\69\82")~=d.Name then return end local E=D:GetAttribute("\69\103\103\78\97\109\101")local F=h[D:GetAttribute("\79\66\74\69\67\84\95\85\85\73\68")]local G=D:GetAttribute("\79\66\74\69\67\84\95\85\85\73\68")if not G then return end for _,H in pairs(D:GetDescendants())do if H:IsA("\66\97\115\101\80\97\114\116")then v(H)y(H)end end local I=Drawing.new("\84\101\120\116")I.Text=`{E} | {F or "?"}`I.Size=18 I.Color=m I.Outline=true I.OutlineColor=Color3.new(0,0,0)I.Center=true I.Visible=false i[G]=I j[G]=D end
 
-local function K(L)if L:GetAttribute("\79\87\78\69\82")~=e.Name then return end local M=L:GetAttribute("\79\66\74\69\67\84\95\85\85\73\68")if j[M]then j[M]:Remove()j[M]=nil end k[M]=nil end
+local function J(K)if K:GetAttribute("\79\87\78\69\82")~=d.Name then return end local L=K:GetAttribute("\79\66\74\69\67\84\95\85\85\73\68")if i[L]then i[L]:Remove()i[L]=nil end j[L]=nil end
 
-local function N()for O,P in next,k do if not P or not P:IsDescendantOf(workspace)then k[O]=nil if j[O]then j[O].Visible=false end continue end local Q=j[O]if Q then local R=P.PrimaryPart or P:FindFirstChildWhichIsA("\66\97\115\101\80\97\114\116")if R then local S,T=f:WorldToViewportPoint(R.Position)Q.Position=Vector2.new(S,T)Q.Visible=true else Q.Visible=false end else Q.Visible=false end end end
+local function M()for N,O in pairs(j)do if not O or not O:IsDescendantOf(workspace)then j[N]=nil if i[N]then i[N].Visible=false end continue end local P=i[N]if P then local Q=O.PrimaryPart or O:FindFirstChildWhichIsA("\66\97\115\101\80\97\114\116")if Q then local R,S=e:WorldToViewportPoint(Q.Position)if S then P.Position=Vector2.new(R.X,R.Y)P.Visible=true else P.Visible=false end else P.Visible=false end end end end
 
-for _,U in ipairs(workspace:GetDescendants())do if U:IsA("\77\111\100\101\108")and U.Name=="\80\101\116\69\103\103"then task.spawn(D,U)end end
+for _,T in ipairs(workspace:GetDescendants())do if T:IsA("\77\111\100\101\108")and T.Name=="\80\101\116\69\103\103"then task.spawn(C,T)end end
 
-workspace.DescendantAdded:Connect(function(V)if V:IsA("\77\111\100\101\108")and V.Name=="\80\101\116\69\103\103"then D(V)end end)
+workspace.DescendantAdded:Connect(function(U)if U:IsA("\77\111\100\101\108")and U.Name=="\80\101\116\69\103\103"then C(U)end end)
+workspace.DescendantRemoving:Connect(function(V)if V:IsA("\77\111\100\101\108")and V.Name=="\80\101\116\69\103\103"then J(V)end end)
 
-workspace.DescendantRemoving:Connect(function(W)if W:IsA("\77\111\100\101\108")and W.Name=="\80\101\116\69\103\103"then K(W)end end)
+local W
+W=hookfunction(getconnections(a["\71\97\109\101\69\118\101\110\116\115"]["\69\103\103\82\101\97\100\121\84\111\72\97\116\99\104\95\82\69"]["\79\110\67\108\105\101\110\116\69\118\101\110\116"])[1].Function,newcclosure(function(X,Y)q(X,Y)return W(X,Y)end))
 
-local X
-X=hookfunction(getconnections(a["\71\97\109\101\69\118\101\110\116\115"]["\69\103\103\82\101\97\100\121\84\111\72\97\116\99\104\95\82\69"]["\79\110\67\108\105\101\110\116\69\118\101\110\116"])[1].Function,newcclosure(function(Y,Z)r(Y,Z)return X(Y,Z)end))
-
-c.PreRender:Connect(N)
+c["\80\114\101\82\101\110\100\101\114"]:Connect(M)
