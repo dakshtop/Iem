@@ -10,8 +10,6 @@ mt.__namecall = newcclosure(function(self, ...)
     return old(self, ...)
 end)
 
-lp.Kick = function() end
-
 local Scripts = {
     {
         PlacesIds = {2753915549, 4442272183, 7449423635},
