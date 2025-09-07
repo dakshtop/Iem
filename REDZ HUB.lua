@@ -1,3 +1,9 @@
+setreadonly(getrawmetatable(game),false)
+getrawmetatable(game).__namecall=newcclosure(function(self,...)
+    if getnamecallmethod()=="Kick"and self==game:GetService("Players").LocalPlayer then return end
+    return ({pcall(getrawmetatable(game).__namecall,self,...)})[2]
+end)
+game:GetService("Players").LocalPlayer.Kick=function()end
 local Scripts = {
     {
         PlacesIds = {2753915549, 4442272183, 7449423635},
