@@ -1,7 +1,7 @@
 queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/dakshtop/Iem/main/auto-execute.lua'))()")
 
 getgenv().Config = {
-    Team = "Pirates",
+    Team = "Marines",
     HideUI = true,
     HuntConfig = {
         ["Earned Notification Enabled"] = true,
